@@ -808,7 +808,7 @@ amp-lightbox { z-index: 9999;}
         width: 75vh;
         height: 75vh;
     }
-    section.top-view { margin-top: 2em;}
+    section.top-view { padding: 2em 0;}
     .top-view h1 {font-size: 2.4em; margin: 4em 0 0.3em;}
     .top-view p { font-size: 1.1em; line-height: 2em; color: #3a3838; }
 }
@@ -1116,18 +1116,12 @@ header .chat_with_us:hover,header .call_us:hover {color: #FFFFFF;}
 75% {  background-color: #FFFFFF;  }
 100% {  background-color: #f9fbfd;   }
 }
-.price-m, .btn-buy {  display: inline-block;}
+.title-p, .btn-down {  display: inline-block;}
 
-.btn-buy {float: right;}
+.btn-down {float: right;}
 
 del {color: #777;}
 
-.btn-buy {
-    color: #fff;
-    background: #00bf74;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
 ul.feature-list {
     padding-left: 1em;
 }
@@ -1148,8 +1142,10 @@ ul.feature-list li:after {
     color: #00bf74;
 }
 .title-p {
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 300;
+    color: #62646a;
+    width: 90%;
 }
 .price-m {
     color:#00bf74;
@@ -1157,10 +1153,19 @@ ul.feature-list li:after {
     vertical-align: sub;
 }
 .price-list li.active {
-    background: #6e00ff;
-    color: #fff;
+    background: #fafafa;
+    color: #525252;
     text-align: center;
     font-size: 15px;
+    font-weight: 500;
+}
+.btn-book {
+    color: #00bf74;
+    border: 1px solid #00bf74;
+    font-weight: 600;
+}
+.buy-pack {
+    outline: none;
 }
 /* Tabs */
 
@@ -1168,29 +1173,34 @@ ul.feature-list li:after {
     amp-selector[role=tablist].tabs-with-flex {
         display: flex;
         flex-wrap: wrap;
+        border: 1px solid #dadbdd;
     }
     amp-selector[role=tablist].tabs-with-flex [role=tab] {
         flex-grow: 1;
         /* custom styling, feel free to change */
+        background-color: #fafafa;
+        font-size: 16px;
+        font-weight: 700;
+        color: #7a7d85;
         text-align: center;
-        padding: .5rem;
-        background: #fff;
-        font-weight: 600;
-        border: 1px solid #e6e6e6;
-        color: #868686;
+        border-bottom: 1px solid #dadbdd;
+        border-right: 1px solid #dadbdd;
+        border-left: none;
+        padding: 16px;
     }
     amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
         /* custom styling, feel free to change */
         outline: none;
-        border-bottom: 2px solid #6e00ff;
-        color: #6e00ff;
+        color: #1dbf73;
+        border-bottom: 3px solid #1dbf73;
+        background-color: #fff; 
      }
     amp-selector[role=tablist].tabs-with-flex [role=tabpanel] {
         display: none;
         width: 100%;
         order: 1; /* must be greater than the order of the tab buttons to flex to the next line */
         /* custom styling, feel free to change */
-        padding: 10px 5px 10px 5px;
+        padding: 20px 24px;
         
     }
     amp-selector[role=tablist].tabs-with-flex [role=tab][selected] + [role=tabpanel] {
@@ -1302,7 +1312,7 @@ ul.feature-list li:after {
     
 <main role="main">
 
-<section class="top-view"> 
+<section class="top-view bg-light"> 
     <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -1326,7 +1336,7 @@ ul.feature-list li:after {
           </div>
       </div>
 
-      <div class="col text-center py-3  py-lg-3    bg-white ">
+      <div class="col text-center py-3 py-lg-3">
       
         <button type="button" on="tap:AMP.scrollTo(id=&#39;InlineLeadFrm&#39;, position=&#39;top&#39;)" class="btn cta-btn  btn-prmary btn-lg font-weight-bold">Book A Trial Class</button> 
         <div class="row no-gutters text-center">
@@ -1344,7 +1354,7 @@ ul.feature-list li:after {
 </section>
 
 <!--Why Footprint-->
-<section class="py-3 py-lg-5 bg-light why-ft">
+<section class="py-3 py-lg-5 bg-white why-ft">
     <div class="container">
       <!--  -->
         <div class="row text-center title-text">
@@ -1367,13 +1377,16 @@ ul.feature-list li:after {
             <div id="tabpanel1"
               role="tabpanel"
               aria-labelledby="tab1">
-              <p class="title-p">Engage your child with Daily LIve class of 1 Hr through a early childcare expert, get access to Live Events and shows</p>
               <div class="">
+                <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
+                  <p class="m-0"><strong>Price Starting</strong></p>
+                  <p class="m-0"><strong>&#8377; 1333/Month</strong></p>
+                </div>
                 <amp-accordion class="sample hidden-header"  disable-session-states>
                   <section>
                     <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
-                      <p class="m-0 price-m">Price Starting Rs 1333/Month</p>
-                      <h4 class="m-0 btn-buy"><span class="show-more">Buy Now</span> <span class="show-less">Buy Now</span></h4>
+                     <p class="title-p">Engage your child with Daily LIve class of 1 Hr through a early childcare expert, get access to Live Events and shows</p>
+                      <h4 class="m-0 btn-down"><span class="show-more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span> <span class="show-less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span></h4>
                     </div>
                       <ul class="list-group mb-4 price-list">
                         <li class="list-group-item active">
@@ -1381,21 +1394,21 @@ ul.feature-list li:after {
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                           Monthly
-                          <span class="badge badge-primary badge-pill">1999</span>
+                          <span class="badge badge-primary badge-pill">&#8377; 1999</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                           Qtrly
-                          <span class="badge badge-primary badge-pill"><del>4999</del> &nbsp; 1667/month</span>
+                          <span class="badge badge-primary badge-pill"><del>&#8377; 4999</del> &nbsp; &#8377;1667/month</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                           Six
-                          <span class="badge badge-primary badge-pill"><del>7999</del> &nbsp; 1333/month </span>
+                          <span class="badge badge-primary badge-pill"><del>&#8377; 7999</del> &nbsp; &#8377;1333/month </span>
                         </li>
                       </ul>
                   </section>
                 </amp-accordion>
                 
-                <!-- <p class="m-0"><a href="#" class="btn btn-buy">Buy Now</a></p> -->
+
                 <!--  -->
               </div>
               
@@ -1408,7 +1421,7 @@ ul.feature-list li:after {
                 <li>Daily 1 Hr Live Classes (Weekdays)</li>
                 <li>Downloadable Worksheets and resources</li>
               </ul>
-              <a href="#" class="btn btn-primary btn-block">Book A Trail Class</a>
+              <a href="#" class="btn btn-book btn-block">Book A Trail Class</a>
             </div>
             <div id="tab2"
               role="tab"
@@ -1417,13 +1430,17 @@ ul.feature-list li:after {
             <div id="tabpanel2"
               role="tabpanel"
               aria-labelledby="tab2">
-              <p class="title-p">Engage your child with Daily LIve class of 1 Hr through a early childcare expert, get access to Live Events and shows</p>
 
+              <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
+                <p class="m-0"><strong>Price Starting</strong></p>
+                <p class="m-0"><strong>&#8377; 3999/Month</strong></p>
+              </div>
+              
               <amp-accordion class="sample hidden-header"  disable-session-states>
                 <section>
                   <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
-                    <p class="m-0 price-m">Price Starting Rs 3999/Month</p>
-                    <h4 class="m-0 btn-buy"><span class="show-more">Buy Now</span> <span class="show-less">Buy Now</span></h4>
+                    <p class="title-p">Engage your child with Daily LIve class of 1 Hr through a early childcare expert, get access to Live Events and shows</p>
+                    <h4 class="m-0 btn-down"><span class="show-more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span> <span class="show-less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span></h4>
                   </div>
                     <ul class="list-group mb-4 price-list">
                       <li class="list-group-item active">
@@ -1431,15 +1448,15 @@ ul.feature-list li:after {
                       </li>
                       <li class="list-group-item d-flex justify-content-between align-items-center">
                         Monthly
-                        <span class="badge badge-primary badge-pill">3499</span>
+                        <span class="badge badge-primary badge-pill">&#8377; 3499</span>
                       </li>
                       <li class="list-group-item d-flex justify-content-between align-items-center">
                         Qtrly
-                        <span class="badge badge-primary badge-pill"><del>9499</del> &nbsp; 3166/month</span>
+                        <span class="badge badge-primary badge-pill"><del>&#8377; 9499</del> &nbsp; &#8377; 3166/month</span>
                       </li>
                       <li class="list-group-item d-flex justify-content-between align-items-center">
                         Six
-                        <span class="badge badge-primary badge-pill"><del>16999</del> &nbsp; 2833/month </span>
+                        <span class="badge badge-primary badge-pill"><del>&#8377; 16999</del> &nbsp; &#8377; 2833/month </span>
                       </li>
                     </ul>
                 </section>
@@ -1456,7 +1473,7 @@ ul.feature-list li:after {
                 <li>Daily 1 Hr Live Classes (Weekdays)</li>
                 <li>Downloadable Worksheets and resources</li>
               </ul>
-              <a href="#" class="btn btn-primary btn-block">Book A Trail Class</a>
+              <a href="#" class="btn btn-book btn-block">Book A Trail Class</a>
             </div>
             <div id="tab3"
               role="tab"
@@ -1465,17 +1482,17 @@ ul.feature-list li:after {
             <div id="tabpanel3"
               role="tabpanel"
               aria-labelledby="tab3">
-              <p class="title-p">Have your child learn and engage through Storytelling, Virtual Tours, Shows and many more. </p>
-              <!-- <div class="d-flex justify-content-between align-items-center mb-3 buy-pack">
-                <p class="m-0">Price Starting Rs 667/Month</p>
-                <p class="m-0"><a href="#" class="btn btn-buy">Buy Now</a></p>
-              </div> -->
 
+              <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
+                <p class="m-0"><strong>Price Starting</strong></p>
+                <p class="m-0"><strong>&#8377; 667/Month</strong></p>
+              </div>
+              
               <amp-accordion class="sample hidden-header"  disable-session-states>
                 <section>
                   <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
-                    <p class="m-0 price-m">Price Starting Rs 667/Month</p>
-                    <h4 class="m-0 btn-buy"><span class="show-more">Buy Now</span> <span class="show-less">Buy Now</span></h4>
+                    <p class="title-p">Have your child learn and engage through Storytelling, Virtual Tours, Shows and many more. </p>
+                    <h4 class="m-0 btn-down"><span class="show-more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span> <span class="show-less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span></h4>
                   </div>
                     <ul class="list-group mb-4 price-list">
                       <li class="list-group-item active">
@@ -1483,15 +1500,15 @@ ul.feature-list li:after {
                       </li>
                       <li class="list-group-item d-flex justify-content-between align-items-center">
                         Monthly
-                        <span class="badge badge-primary badge-pill">4999</span>
+                        <span class="badge badge-primary badge-pill">&#8377; 4999</span>
                       </li>
                       <li class="list-group-item d-flex justify-content-between align-items-center">
                         Qtrly
-                        <span class="badge badge-primary badge-pill"><del>13497</del> &nbsp; 4499/month</span>
+                        <span class="badge badge-primary badge-pill"><del>&#8377; 13497</del> &nbsp; &#8377;4499/month</span>
                       </li>
                       <li class="list-group-item d-flex justify-content-between align-items-center">
                         Six
-                        <span class="badge badge-primary badge-pill"><del>23994</del> &nbsp; 3999/month </span>
+                        <span class="badge badge-primary badge-pill"><del>&#8377; 23994</del> &nbsp; &#8377;3999/month </span>
                       </li>
                     </ul>
                 </section>
@@ -1503,7 +1520,7 @@ ul.feature-list li:after {
                 <li>4 Parenting Webinar per month</li>
                 <li>Upgrade anytime</li>
               </ul>
-              <a href="#" class="btn btn-primary btn-block">Book A Trail Class</a>
+              <a href="#" class="btn btn-book btn-block">Book A Trail Class</a>
             </div>
             
           </amp-selector>
@@ -1599,7 +1616,7 @@ ul.feature-list li:after {
 </section>
 <!--End-->
 <!--Forms-->
-<section class="py-3 bg-white mt-3">
+<section class="py-3 bg-light mt-3">
     <div class="container">
          <div class="row justify-content-center">
             <div class="col-lg-7">
@@ -1719,7 +1736,7 @@ ul.feature-list li:after {
     </div>
 </div></section>
 
-<section class="py-3 py-lg-5 bg-light why-ft">       
+<section class="py-3 py-lg-5 bg-white why-ft">       
     <div class="container">
         <div class="row text-center title-text">
             <div class="col-12">
@@ -1825,7 +1842,7 @@ ul.feature-list li:after {
 </section>
 
 <!-- FAQ  -->
-<section class="py-5 py-lg-5 bg-light faq-list">
+<section class="py-5 py-lg-5 bg-white faq-list">
     <div class="container">
         <div class="row text-center title-text">
             <div class="col-12">
