@@ -1168,6 +1168,13 @@ ul.feature-list li:after {
 .buy-pack {
     outline: none;
 }
+.card.price-view {
+    border-radius: 12px;
+    margin-bottom: 1em;
+}
+.price-view .Pricing-list {
+    padding: 1em 1em 0;
+}
 /* Tabs */
 
     /* Styles for the flex layout based tabs */
@@ -1367,76 +1374,55 @@ ul.feature-list li:after {
 
         <div class="row mt-5 mb-5">
           <div class="col-12 ">
-            <amp-selector class="tabs-with-flex"
-            role="tablist"
-            keyboard-select-mode="focus">
-            <div id="tab1"
-              role="tab"
-              aria-controls="tabpanel1"
-              option
-              selected>Discovery</div>
-            <div id="tabpanel1"
-              role="tabpanel"
-              aria-labelledby="tab1">
-              <div class="">
-                <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
-                  <p class="m-0"><strong>Price Starting</strong></p>
-                  <p class="m-0"><strong>&#8377; 1333/Month</strong></p>
-                </div>
-                <amp-accordion class="sample hidden-header"  disable-session-states>
-                  <section>
-                    <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
-                     <p class="title-p">Engage your child with Daily LIve class of 1 Hr through a early childcare expert, get access to Live Events and shows</p>
-                      <h4 class="m-0 btn-down"><span class="show-more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span> <span class="show-less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span></h4>
-                    </div>
-                      <ul class="list-group mb-4 price-list">
-                        <li class="list-group-item active">
-                          Live Large Group Preschool + Live Events (webinar format, chat interactive) <br>(Mon-Fri, 11 AM and 5 PM)
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                          Monthly
-                          <span class="badge badge-primary badge-pill">&#8377; 1999</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                          Qtrly
-                          <span class="badge badge-primary badge-pill"><del>&#8377; 4999</del> &nbsp; &#8377;1667/month</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                          Six
-                          <span class="badge badge-primary badge-pill"><del>&#8377; 7999</del> &nbsp; &#8377;1333/month </span>
-                        </li>
-                      </ul>
-                  </section>
-                </amp-accordion>
-                
-
-                <!--  -->
+            <!-- Card 1 -->
+            <div class="card price-view">
+              <div class="card-header">
+                <h5 class="card-title m-0">Discovery</h5>
+              </div> 
+            <div class="Pricing-list">
+              <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
+                <p class="m-0"><strong>Price Starting</strong></p>
+                <p class="m-0"><strong>&#8377; 1333/Month</strong></p>
               </div>
-              
-              <p><strong>100% money back guarantee for 15 days.</strong></p>
-              <ul class="feature-list">
-                <li>40 Live Events per month ((Story Telling, Virtual Shows, Virtual Tours)</li>
-                <li>4 Parenting Webinar with Q&A per month</li>
-                <li>Non Interactive classes</li>
-                <li>Large Group setting</li>
-                <li>Daily 1 Hr Live Classes (Weekdays)</li>
-                <li>Downloadable Worksheets and resources</li>
-              </ul>
-              <a href="#" class="btn btn-book btn-block">Book A Trail Class</a>
+              <amp-accordion class="sample hidden-header"  disable-session-states>
+                <section>
+                  <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
+                   <p class="title-p">Engage your child with Daily LIve class of 1 Hr through a early childcare expert, get access to Live Events and shows</p>
+                    <h4 class="m-0 btn-down"><span class="show-more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span> <span class="show-less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span></h4>
+                  </div>
+                    <ul class="list-group mb-4 price-list">
+                      <li class="list-group-item active">
+                        Live Large Group Preschool + Live Events (webinar format, chat interactive) <br>(Mon-Fri, 11 AM and 5 PM)
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Monthly
+                        <span class="badge badge-primary badge-pill">&#8377; 1999</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Qtrly
+                        <span class="badge badge-primary badge-pill"><del>&#8377; 4999</del> &nbsp; &#8377;1667/month</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Six
+                        <span class="badge badge-primary badge-pill"><del>&#8377; 7999</del> &nbsp; &#8377;1333/month </span>
+                      </li>
+                    </ul>
+                </section>
+              </amp-accordion>
+              <!--  -->
             </div>
-            <div id="tab2"
-              role="tab"
-              aria-controls="tabpanel2"
-              option>Interactive</div>
-            <div id="tabpanel2"
-              role="tabpanel"
-              aria-labelledby="tab2">
-
+           </div>
+            <!-- End Card 1 -->
+             <!-- Card 2 -->
+             <div class="card price-view">
+              <div class="card-header">
+                <h5 class="card-title m-0">Interactive</h5>
+              </div> 
+            <div class="Pricing-list">
               <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
                 <p class="m-0"><strong>Price Starting</strong></p>
                 <p class="m-0"><strong>&#8377; 3999/Month</strong></p>
               </div>
-              
               <amp-accordion class="sample hidden-header"  disable-session-states>
                 <section>
                   <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
@@ -1462,69 +1448,51 @@ ul.feature-list li:after {
                     </ul>
                 </section>
               </amp-accordion>
-              
-              <p><strong>100% money back guarantee for 15 days.</strong></p>
-              <ul class="feature-list">
-                <li>40 Live Events per month ((Story Telling, Virtual Shows, Virtual Tours)</li>
-                <li>Fully Interactive Classes</li>
-                <li>Personalized Attention</li>
-                <li>Weekly one to one care call with teacher</li>
-                <li>1:10 Teacher to Student Ratio</li>
-                <li>4 Parenting Webinar per month</li>
-                <li>Daily 1 Hr Live Classes (Weekdays)</li>
-                <li>Downloadable Worksheets and resources</li>
-              </ul>
-              <a href="#" class="btn btn-book btn-block">Book A Trail Class</a>
+              <!--  -->
             </div>
-            <div id="tab3"
-              role="tab"
-              aria-controls="tabpanel3"
-              option>Events</div>
-            <div id="tabpanel3"
-              role="tabpanel"
-              aria-labelledby="tab3">
-
+           </div>
+            <!-- End Card 2 -->
+             <!-- Card 3 -->
+             <div class="card price-view">
+              <div class="card-header">
+                <h5 class="card-title m-0">Events</h5>
+              </div> 
+            <div class="Pricing-list">
               <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
                 <p class="m-0"><strong>Price Starting</strong></p>
                 <p class="m-0"><strong>&#8377; 667/Month</strong></p>
               </div>
-              
               <amp-accordion class="sample hidden-header"  disable-session-states>
                 <section>
                   <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
                     <p class="title-p">Have your child learn and engage through Storytelling, Virtual Tours, Shows and many more. </p>
                     <h4 class="m-0 btn-down"><span class="show-more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span> <span class="show-less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span></h4>
                   </div>
-                    <ul class="list-group mb-4 price-list">
-                      <li class="list-group-item active">
-                        Small Group Interactive Live Classes (Weekdays) + Live Events
-                      </li>
-                      <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Monthly
-                        <span class="badge badge-primary badge-pill">&#8377; 4999</span>
-                      </li>
-                      <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Qtrly
-                        <span class="badge badge-primary badge-pill"><del>&#8377; 13497</del> &nbsp; &#8377;4499/month</span>
-                      </li>
-                      <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Six
-                        <span class="badge badge-primary badge-pill"><del>&#8377; 23994</del> &nbsp; &#8377;3999/month </span>
-                      </li>
-                    </ul>
+                  <ul class="list-group mb-4 price-list">
+                    <li class="list-group-item active">
+                      Small Group Interactive Live Classes (Weekdays) + Live Events
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      Monthly
+                      <span class="badge badge-primary badge-pill">&#8377; 4999</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      Qtrly
+                      <span class="badge badge-primary badge-pill"><del>&#8377; 13497</del> &nbsp; &#8377;4499/month</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      Six
+                      <span class="badge badge-primary badge-pill"><del>&#8377; 23994</del> &nbsp; &#8377;3999/month </span>
+                    </li>
+                  </ul>
+                  
                 </section>
               </amp-accordion>
               
-              <p><strong>100% money back guarantee for 15 days.</strong></p>
-              <ul class="feature-list">
-                <li>40 Live Events per month ((Story Telling, Virtual Shows, Virtual Tours)</li>
-                <li>4 Parenting Webinar per month</li>
-                <li>Upgrade anytime</li>
-              </ul>
-              <a href="#" class="btn btn-book btn-block">Book A Trail Class</a>
+              <!--  -->
             </div>
-            
-          </amp-selector>
+           </div>
+            <!-- End Card 3 -->
           </div>
         </div>
 
