@@ -452,12 +452,12 @@ header.masthead h1{font-size:2.25rem;}
 .program-list .program-card:nth-child(5) .card-header{background:#F05684;}
 /*.program-card .list-group-item{border:0;}*/
 .scrolling-wrapper{overflow-x:auto;}
-.program-card{background:#FFFFFF;border-radius:19px;width:32%;min-width:320px;margin-right:10px;margin-left:5px;margin-bottom:20px;}
+.program-card{background:#FFFFFF;border-radius:19px;width:32%;min-width:320px;margin: 1em;}
 .custom-select-green{color:#00c074;border:1px solid #00c074;}
 .program-view .title-text h2{font-size:26px;font-weight:600;line-height:35px;}
 .program-view .title-text p{font-size:14px;}
 .program-select select.custom-select{border-radius:2em;border:0;height:3em;font-size:17px;font-weight:700;padding-left:25px;border: 1px solid #00c074;}
-.program-card:first-child{margin-left:25px;}
+/* .program-card:first-child{margin-left:25px;} */
 .program-card{min-width:290px;}
 .why-ft .card{border-radius:1.5em;}
 .feature-img{width:150px;margin:18px auto;height: 180px;}
@@ -1118,7 +1118,7 @@ header .chat_with_us:hover,header .call_us:hover {color: #FFFFFF;}
 }
 .title-p, .btn-down {  display: inline-block;}
 
-.btn-down {float: right;}
+.btn-down {text-align: center;width: 100%;}
 
 del {color: #777;}
 
@@ -1145,7 +1145,7 @@ ul.feature-list li:after {
     font-size: 14px;
     font-weight: 300;
     color: #62646a;
-    width: 90%;
+    margin: 0;
 }
 .price-m {
     color:#00bf74;
@@ -1173,7 +1173,7 @@ ul.feature-list li:after {
     margin-bottom: 1em;
 }
 .price-view .Pricing-list {
-    padding: 1em 1em 0;
+    padding: 1em;
 }
 .price-view:first-child .card-header {
     background: #FFB900;
@@ -1189,6 +1189,10 @@ ul.feature-list li:after {
     background: #00CC6A;
     color: #fff;
     border-radius: 10px 10px 1px 2px;
+}
+.event-list p.text-justify {
+    font-size: 14px;
+    text-align: left;
 }
 /* Tabs */
 
@@ -1399,31 +1403,47 @@ ul.feature-list li:after {
                 <p class="m-0"><strong>Price Starting</strong></p>
                 <p class="m-0"><strong>&#8377; 1333/Month</strong></p>
               </div>
-              <amp-accordion class="sample hidden-header"  disable-session-states>
+              <p class="title-p">Engage your child with Daily LIve class of 1 Hr through a early childcare expert, get access to Live Events and shows</p>
+              <amp-accordion class="sample" disable-session-states>
                 <section>
-                  <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
-                   <p class="title-p">Engage your child with Daily LIve class of 1 Hr through a early childcare expert, get access to Live Events and shows</p>
-                    <h4 class="m-0 btn-down"><span class="show-more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span> <span class="show-less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span></h4>
+                  <h4 class="m-0 btn-down bg-transparent border-0 p-0"><span class="show-more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span> <span class="show-less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span></h4>
+
+                  <div class="content-view">
+                    <!--  -->
+                      <p class="mt-2"><strong>100% money back guarantee for 15 days.</strong></p>
+                      <ul class="feature-list">
+                        <li>40 Live Events per month ((Story Telling, Virtual Shows, Virtual Tours)</li>
+                        <li>4 Parenting Webinar with Q&A per month</li>
+                        <li>Non Interactive classes</li>
+                        <li>Large Group setting</li>
+                        <li>Daily 1 Hr Live Classes (Weekdays)</li>
+                        <li>Downloadable Worksheets and resources</li>
+                      </ul>
+                      <!--  -->
+                      <ul class="list-group mb-4 price-list">
+                        <li class="list-group-item active">
+                          Live Large Group Preschool + Live Events (webinar format, chat interactive) <br>(Mon-Fri, 11 AM and 5 PM)
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          Monthly
+                          <span class="badge badge-primary badge-pill">&#8377; 1999</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          Qtrly
+                          <span class="badge badge-primary badge-pill"><del>&#8377; 4999</del> &nbsp; &#8377;1667/month</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          Six
+                          <span class="badge badge-primary badge-pill"><del>&#8377; 7999</del> &nbsp; &#8377;1333/month </span>
+                        </li>
+                      </ul>
+
+                      <a href="#" class="btn btn-book btn-block">Book A Trail Class</a>
                   </div>
-                    <ul class="list-group mb-4 price-list">
-                      <li class="list-group-item active">
-                        Live Large Group Preschool + Live Events (webinar format, chat interactive) <br>(Mon-Fri, 11 AM and 5 PM)
-                      </li>
-                      <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Monthly
-                        <span class="badge badge-primary badge-pill">&#8377; 1999</span>
-                      </li>
-                      <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Qtrly
-                        <span class="badge badge-primary badge-pill"><del>&#8377; 4999</del> &nbsp; &#8377;1667/month</span>
-                      </li>
-                      <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Six
-                        <span class="badge badge-primary badge-pill"><del>&#8377; 7999</del> &nbsp; &#8377;1333/month </span>
-                      </li>
-                    </ul>
+                  
                 </section>
               </amp-accordion>
+
               <!--  -->
             </div>
            </div>
@@ -1438,12 +1458,25 @@ ul.feature-list li:after {
                 <p class="m-0"><strong>Price Starting</strong></p>
                 <p class="m-0"><strong>&#8377; 3999/Month</strong></p>
               </div>
-              <amp-accordion class="sample hidden-header"  disable-session-states>
+              <p class="title-p">Engage your child with Daily LIve class of 1 Hr through a early childcare expert, get access to Live Events and shows</p>
+
+              <amp-accordion class="sample"  disable-session-states>
                 <section>
-                  <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
-                    <p class="title-p">Engage your child with Daily LIve class of 1 Hr through a early childcare expert, get access to Live Events and shows</p>
-                    <h4 class="m-0 btn-down"><span class="show-more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span> <span class="show-less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span></h4>
-                  </div>
+                  <h4 class="m-0 btn-down bg-transparent border-0 p-0"><span class="show-more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span> <span class="show-less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span></h4>
+
+                  <div class="content-view">
+                    <p class="mt-2"><strong>100% money back guarantee for 15 days.</strong></p>
+                    <ul class="feature-list">
+                      <li>40 Live Events per month ((Story Telling, Virtual Shows, Virtual Tours)</li>
+                      <li>Fully Interactive Classes</li>
+                      <li>Personalized Attention</li>
+                      <li>Weekly one to one care call with teacher</li>
+                      <li>1:10 Teacher to Student Ratio</li>
+                      <li>4 Parenting Webinar per month</li>
+                      <li>Daily 1 Hr Live Classes (Weekdays)</li>
+                      <li>Downloadable Worksheets and resources</li>
+                    </ul>
+                    <!--  -->
                     <ul class="list-group mb-4 price-list">
                       <li class="list-group-item active">
                         Small Group Interactive Live Classes (Weekend) + Live Events <br> (11:30 AM to 1 PM)
@@ -1461,6 +1494,8 @@ ul.feature-list li:after {
                         <span class="badge badge-primary badge-pill"><del>&#8377; 16999</del> &nbsp; &#8377; 2833/month </span>
                       </li>
                     </ul>
+                    <a href="#" class="btn btn-book btn-block">Book A Trail Class</a>
+                  </div>
                 </section>
               </amp-accordion>
               <!--  -->
@@ -1477,12 +1512,19 @@ ul.feature-list li:after {
                 <p class="m-0"><strong>Price Starting</strong></p>
                 <p class="m-0"><strong>&#8377; 667/Month</strong></p>
               </div>
+              <p class="title-p">Have your child learn and engage through Storytelling, Virtual Tours, Shows and many more. </p>
               <amp-accordion class="sample hidden-header"  disable-session-states>
                 <section>
-                  <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
-                    <p class="title-p">Have your child learn and engage through Storytelling, Virtual Tours, Shows and many more. </p>
-                    <h4 class="m-0 btn-down"><span class="show-more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span> <span class="show-less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span></h4>
-                  </div>
+                  <h4 class="m-0 btn-down bg-transparent border-0 p-0"><span class="show-more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span> <span class="show-less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span></h4>
+
+                 <div class="content-view">
+                  <p class="mt-2"><strong>100% money back guarantee for 15 days.</strong></p>
+                  <ul class="feature-list">
+                    <li>40 Live Events per month ((Story Telling, Virtual Shows, Virtual Tours)</li>
+                    <li>4 Parenting Webinar per month</li>
+                    <li>Upgrade anytime</li>
+                  </ul>
+                <!--  -->
                   <ul class="list-group mb-4 price-list">
                     <li class="list-group-item active">
                       Small Group Interactive Live Classes (Weekdays) + Live Events
@@ -1500,7 +1542,9 @@ ul.feature-list li:after {
                       <span class="badge badge-primary badge-pill"><del>&#8377; 23994</del> &nbsp; &#8377;3999/month </span>
                     </li>
                   </ul>
-                  
+                  <a href="#" class="btn btn-book btn-block">Book A Trail Class</a>
+                  </div>
+
                 </section>
               </amp-accordion>
               
@@ -1729,7 +1773,7 @@ ul.feature-list li:after {
         </div>
         <div class="row program-list">
           <div class="container">
-                  <div class="scrolling-wrapper row  text-center">
+                  <div class="scrolling-wrapper row  text-center event-list">
                         <div class="card blue-bdr shadow program-card col mb-4">
                           <div class="card-body pb-3">
                             <p class="card-title h5 mb-2">Virtual Tour - Mini Planetarium</p>
