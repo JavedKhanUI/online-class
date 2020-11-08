@@ -400,6 +400,137 @@ body{min-width:992px;}
 .table td,.table th{background-color:#fff;}
 }
 
+/*  */
+.title-p, .btn-down {  display: inline-block;}
+
+.btn-down {float: right;}
+
+del {color: #777;}
+
+ul.feature-list {
+    padding-left: 1em;
+}
+.feature-list li {
+   font-size: 14px;
+    margin: 1em 0px;
+    padding-left: 6px;
+    list-style: none;
+    color: #3a3a3a;
+    position: relative;
+}
+ul.feature-list li:after {
+   content: '\2713';
+    position: absolute;
+    top: 0;
+    left: -15px;
+    font-weight: 900;
+    color: #71ac47;
+}
+.title-p { font-size: 16px; font-weight: 300;width: 90%;color: #707070;}
+.pack-price { color: #707070;}
+
+.price-m {
+    color:#00bf74;
+    font-weight: 700;
+    vertical-align: sub;
+}
+.price-list li.active {
+    background: #fafafa;
+    color: #525252;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+.btn-book {
+    color: #fff;
+    border: 1px solid #70ad47;
+    font-weight: 600;
+    background: #70ad47;
+}
+.buy-pack { outline: none;}
+
+p.tab-text {color: #538135; font-size: 14px; font-weight: 500;}
+/* Tabs */
+
+    /* Styles for the flex layout based tabs */
+    amp-selector[role=tablist].tabs-with-flex {
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid #dadbdd;
+    }
+    amp-selector[role=tablist].tabs-with-flex [role=tab] {
+        flex-grow: 1;
+        /* custom styling, feel free to change */
+        background-color: #fafafa;
+        font-size: 16px;
+        font-weight: 500;
+        color: #000000;
+        text-align: center;
+        border-bottom: 1px solid #71ac47;
+        border-right: 1px solid #dadbdd;
+        border-left: none;
+        padding: 16px;
+    }
+    amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
+        /* custom styling, feel free to change */
+        outline: none;
+        color: #70ad47;
+        border: 1px solid #70ad47;
+        background-color: #fff;
+        border-bottom: #fff;
+        border-top: 4px solid #72ab47;
+        font-weight: 700;
+     }
+    amp-selector[role=tablist].tabs-with-flex [role=tabpanel] {
+        display: none;
+        width: 100%;
+        order: 1; /* must be greater than the order of the tab buttons to flex to the next line */
+        /* custom styling, feel free to change */
+        padding: 20px 24px;
+        
+    }
+    amp-selector[role=tablist].tabs-with-flex [role=tab][selected] + [role=tabpanel] {
+        display: block;
+        border: 1px solid #71ac47;
+        border-top: #fff;
+    }
+
+    /* Styles for the selector based tabs */
+    amp-selector[role=tablist].tabs-with-selector {
+        display: flex;
+    }
+    amp-selector[role=tablist].tabs-with-selector [role=tab][selected] {
+        outline: none;
+        /* custom styling, feel free to change */
+        border-bottom: 2px solid  #005AF0;
+    }
+    amp-selector[role=tablist].tabs-with-selector {
+        display: flex;
+    }
+    amp-selector[role=tablist].tabs-with-selector [role=tab] {
+      /* custom styling, feel free to change */
+      width: 100%;
+      text-align: center;
+      padding: .5rem;
+      
+    }
+    amp-selector.tabpanels [role=tabpanel] {
+      display: none;
+      /* custom styling, feel free to change */
+      padding:  2rem;
+    }
+    amp-selector.tabpanels [role=tabpanel][selected] {
+      outline: none;
+      display: block;
+    }
+    .event-list p.text-justify {
+        font-size: 14px;
+        text-align: left;
+    }
+
+
+/*  */
+
 /*! Custom CSS */
 .card.pricing-card.bg-primary {background-color: rgb(110, 0, 255);}
 .pricing-card .card-title {font-size: 1.8em; margin: 0; font-weight: 600;}
@@ -457,7 +588,7 @@ header.masthead h1{font-size:2.25rem;}
 .program-view .title-text h2{font-size:26px;font-weight:600;line-height:35px;}
 .program-view .title-text p{font-size:14px;}
 .program-select select.custom-select{border-radius:2em;border:0;height:3em;font-size:17px;font-weight:700;padding-left:25px;border: 1px solid #00c074;}
-.program-card:first-child{margin-left:25px;}
+/* .program-card:first-child{margin-left:25px;} */
 .program-card{min-width:290px;}
 .why-ft .card{border-radius:1.5em;}
 .feature-img{width:150px;margin:18px auto;height: 180px;}
@@ -504,6 +635,7 @@ header.masthead h1{font-size:18px;text-align:left;line-height:27px;margin-left:2
 .parentReview .col:nth-child(2){margin:1em 0 0 0;}
 .back-to-top{bottom:85px;}
 .mediaCoverage .card-deck .card{width:70%;margin:0 auto;text-align:center;}
+amp-selector[role=tablist].tabs-with-flex [role=tab] { font-size: 12px;}
 }
 @media only screen    and (min-device-width: 320px)    and (max-device-width: 568px)    and (-webkit-min-device-pixel-ratio: 2){
 header.masthead{padding-top:5rem;}
@@ -1116,126 +1248,6 @@ header .chat_with_us:hover,header .call_us:hover {color: #FFFFFF;}
 75% {  background-color: #FFFFFF;  }
 100% {  background-color: #f9fbfd;   }
 }
-.title-p, .btn-down {  display: inline-block;}
-
-.btn-down {float: right;}
-
-del {color: #777;}
-
-ul.feature-list {
-    padding-left: 1em;
-}
-.feature-list li {
-   font-size: 14px;
-    margin: 1em 0px;
-    padding-left: 6px;
-    list-style: none;
-    color: #3a3a3a;
-    position: relative;
-}
-ul.feature-list li:after {
-   content: '\2713';
-    position: absolute;
-    top: 0;
-    left: -15px;
-    font-weight: 900;
-    color: #00bf74;
-}
-.title-p {
-    font-size: 14px;
-    font-weight: 300;
-    color: #62646a;
-    width: 90%;
-}
-.price-m {
-    color:#00bf74;
-    font-weight: 700;
-    vertical-align: sub;
-}
-.price-list li.active {
-    background: #fafafa;
-    color: #525252;
-    text-align: center;
-    font-size: 15px;
-    font-weight: 500;
-}
-.btn-book {
-    color: #fff;
-    border: 1px solid #00bf74;
-    font-weight: 600;
-    background: #00bf74;
-}
-.buy-pack {
-    outline: none;
-}
-/* Tabs */
-
-    /* Styles for the flex layout based tabs */
-    amp-selector[role=tablist].tabs-with-flex {
-        display: flex;
-        flex-wrap: wrap;
-        border: 1px solid #dadbdd;
-    }
-    amp-selector[role=tablist].tabs-with-flex [role=tab] {
-        flex-grow: 1;
-        /* custom styling, feel free to change */
-        background-color: #fafafa;
-        font-size: 16px;
-        font-weight: 700;
-        color: #7a7d85;
-        text-align: center;
-        border-bottom: 1px solid #dadbdd;
-        border-right: 1px solid #dadbdd;
-        border-left: none;
-        padding: 16px;
-    }
-    amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
-        /* custom styling, feel free to change */
-        outline: none;
-        color: #1dbf73;
-        border-bottom: 3px solid #1dbf73;
-        background-color: #fff; 
-     }
-    amp-selector[role=tablist].tabs-with-flex [role=tabpanel] {
-        display: none;
-        width: 100%;
-        order: 1; /* must be greater than the order of the tab buttons to flex to the next line */
-        /* custom styling, feel free to change */
-        padding: 20px 24px;
-        
-    }
-    amp-selector[role=tablist].tabs-with-flex [role=tab][selected] + [role=tabpanel] {
-        display: block;
-    }
-
-    /* Styles for the selector based tabs */
-    amp-selector[role=tablist].tabs-with-selector {
-        display: flex;
-    }
-    amp-selector[role=tablist].tabs-with-selector [role=tab][selected] {
-        outline: none;
-        /* custom styling, feel free to change */
-        border-bottom: 2px solid  #005AF0;
-    }
-    amp-selector[role=tablist].tabs-with-selector {
-        display: flex;
-    }
-    amp-selector[role=tablist].tabs-with-selector [role=tab] {
-      /* custom styling, feel free to change */
-      width: 100%;
-      text-align: center;
-      padding: .5rem;
-      
-    }
-    amp-selector.tabpanels [role=tabpanel] {
-      display: none;
-      /* custom styling, feel free to change */
-      padding:  2rem;
-    }
-    amp-selector.tabpanels [role=tabpanel][selected] {
-      outline: none;
-      display: block;
-    }
 
 </style>    
 <link rel="preload" as="image" href="https://home.footprints.in/assets/img/bg-top-sm.jpg" media="(max-width: 415px)">
@@ -1367,26 +1379,18 @@ ul.feature-list li:after {
 
         <div class="row mt-5 mb-5">
           <div class="col-12 ">
-            <amp-selector class="tabs-with-flex"
-            role="tablist"
-            keyboard-select-mode="focus">
-            <div id="tab1"
-              role="tab"
-              aria-controls="tabpanel1"
-              option
-              selected>Discovery</div>
-            <div id="tabpanel1"
-              role="tabpanel"
-              aria-labelledby="tab1">
+            <amp-selector class="tabs-with-flex" role="tablist"  keyboard-select-mode="focus">
+            <div id="tab1" role="tab" aria-controls="tabpanel1" option selected>The Discovery <br> Program</div>
+            <div id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
               <div class="">
-                <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
-                  <p class="m-0"><strong>Price Starting</strong></p>
-                  <p class="m-0"><strong>&#8377; 1333/Month</strong></p>
+                <p class="tab-text">Engage your child with Daily LIve class of 1 Hr through a early childcare expert, get access to Live Events and shows</p>
+                <div class="d-flex justify-content-end align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
+                  <p class="m-0 pack-price">From <strong>&#8377; 1333/Month</strong></p>
                 </div>
                 <amp-accordion class="sample hidden-header"  disable-session-states>
                   <section>
                     <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
-                     <p class="title-p">Engage your child with Daily LIve class of 1 Hr through a early childcare expert, get access to Live Events and shows</p>
+                      <p class="title-p m-0"><strong>What’s Included every month:</strong></p>
                       <h4 class="m-0 btn-down"><span class="show-more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span> <span class="show-less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span></h4>
                     </div>
                       <ul class="list-group mb-4 price-list">
@@ -1409,11 +1413,8 @@ ul.feature-list li:after {
                   </section>
                 </amp-accordion>
                 
-
                 <!--  -->
               </div>
-              
-              <p><strong>100% money back guarantee for 15 days.</strong></p>
               <ul class="feature-list">
                 <li>40 Live Events per month ((Story Telling, Virtual Shows, Virtual Tours)</li>
                 <li>4 Parenting Webinar with Q&A per month</li>
@@ -1424,23 +1425,20 @@ ul.feature-list li:after {
               </ul>
               <a href="#" class="btn btn-book btn-block">Book A Trail Class</a>
             </div>
-            <div id="tab2"
-              role="tab"
-              aria-controls="tabpanel2"
-              option>Interactive</div>
-            <div id="tabpanel2"
-              role="tabpanel"
-              aria-labelledby="tab2">
 
-              <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
-                <p class="m-0"><strong>Price Starting</strong></p>
-                <p class="m-0"><strong>&#8377; 3999/Month</strong></p>
+
+            <!--  -->
+         <div id="tab2" role="tab" aria-controls="tabpanel2" option>The Interactive <br>Program </div>
+            <div id="tabpanel2" role="tabpanel" aria-labelledby="tab2">
+              <p class="tab-text">Engage your child with Daily LIve class of 1 Hr through a early childcare expert, get access to Live Events and shows</p>
+              <div class="d-flex justify-content-end align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
+                <p class="m-0 pack-price">From <strong>&#8377; 3999/Month</strong></p>
               </div>
               
               <amp-accordion class="sample hidden-header"  disable-session-states>
                 <section>
                   <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
-                    <p class="title-p">Engage your child with Daily LIve class of 1 Hr through a early childcare expert, get access to Live Events and shows</p>
+                    <p class="title-p m-0"><strong>What’s Included every month:</strong></p>
                     <h4 class="m-0 btn-down"><span class="show-more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span> <span class="show-less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span></h4>
                   </div>
                     <ul class="list-group mb-4 price-list">
@@ -1463,7 +1461,6 @@ ul.feature-list li:after {
                 </section>
               </amp-accordion>
               
-              <p><strong>100% money back guarantee for 15 days.</strong></p>
               <ul class="feature-list">
                 <li>40 Live Events per month ((Story Telling, Virtual Shows, Virtual Tours)</li>
                 <li>Fully Interactive Classes</li>
@@ -1476,23 +1473,20 @@ ul.feature-list li:after {
               </ul>
               <a href="#" class="btn btn-book btn-block">Book A Trail Class</a>
             </div>
-            <div id="tab3"
-              role="tab"
-              aria-controls="tabpanel3"
-              option>Events</div>
-            <div id="tabpanel3"
-              role="tabpanel"
-              aria-labelledby="tab3">
 
-              <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
-                <p class="m-0"><strong>Price Starting</strong></p>
-                <p class="m-0"><strong>&#8377; 667/Month</strong></p>
+            <!--  -->
+
+            <div id="tab3" role="tab"  aria-controls="tabpanel3" option>Footprints <br> Events </div>
+            <div id="tabpanel3" role="tabpanel"  aria-labelledby="tab3">
+              <p class="tab-text">Have your child learn and engage through Storytelling, Virtual Tours, Shows and many more. </p>
+              <div class="d-flex justify-content-end align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
+                <p class="m-0 pack-price">From <strong>&#8377; 667/Month</strong></p>
               </div>
               
               <amp-accordion class="sample hidden-header"  disable-session-states>
                 <section>
                   <div class="d-flex justify-content-between align-items-center mb-3 buy-pack bg-transparent border-0 p-0">
-                    <p class="title-p">Have your child learn and engage through Storytelling, Virtual Tours, Shows and many more. </p>
+                    <p class="title-p m-0"><strong>What’s Included every month:</strong></p>
                     <h4 class="m-0 btn-down"><span class="show-more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span> <span class="show-less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span></h4>
                   </div>
                     <ul class="list-group mb-4 price-list">
@@ -1746,7 +1740,7 @@ ul.feature-list li:after {
         </div>
         <div class="row program-list">
           <div class="container">
-                  <div class="scrolling-wrapper row  text-center">
+                  <div class="scrolling-wrapper row  text-center event-list">
                         <div class="card blue-bdr shadow program-card col mb-4">
                           <div class="card-body pb-3">
                             <p class="card-title h5 mb-2">Virtual Tour - Mini Planetarium</p>
