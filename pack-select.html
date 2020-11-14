@@ -36,27 +36,24 @@
 <link rel="canonical" href="https://home.footprints.in/amp/online-preschool#">
 
 <!--Link-->
-<link rel="preload" as="script" href="./index_files/v0.js">
+<!-- <link rel="preload" as="script" href="./index_files/v0.js">
 <link rel="preload" as="script" href="./index_files/amp-form-0.1.js">
 <link rel="preload" as="script" href="./index_files/amp-accordion-0.1.js">
 <link rel="preload" as="script" href="./index_files/amp-lightbox-0.1.js">
 <link rel="preload" as="script" href="./index_files/amp-bind-0.1.js">
 <link rel="preload" as="script" href="./index_files/amp-video-0.1.js">   
 <link rel="preload" as="script" href="./index_files/amp-position-observer-0.1.js">
-<link rel="preload" as="script" href="./index_files/amp-animation-0.1.js">
+<link rel="preload" as="script" href="./index_files/amp-animation-0.1.js"> -->
     
 <!--Script-->
 <script async="" src="./index_files/v0.js"></script>
 <script async="" custom-element="amp-form" src="./index_files/amp-form-0.1.js"></script> 
 <script async="" custom-element="amp-accordion" src="./index_files/amp-accordion-0.1.js"></script>
-<script async="" custom-element="amp-lightbox" src="./index_files/amp-lightbox-0.1.js"></script>
 <script async="" custom-element="amp-bind" src="./index_files/amp-bind-0.1.js"></script>
-<script async="" custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+<script async="" custom-element="amp-list" src="./index_files/amp-list-0.1.js"></script>
+<script async="" custom-template="amp-mustache" src="./index_files/amp-mustache-0.2.js"></script>
 
-<!--  Import the `amp-selector` component. -->
-<script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
-
-
+<script async="" custom-element="amp-lightbox" src="./index_files/amp-lightbox-0.1.js"></script>
 <!--Video-->
 <script async="" custom-element="amp-video" src="./index_files/amp-video-0.1.js"></script>
 
@@ -66,8 +63,6 @@
 <!--  Import amp-animation extension -->
 <script async="" custom-element="amp-animation" src="./index_files/amp-animation-0.1.js"></script>
     
-<script async="" custom-element="amp-list" src="./index_files/amp-list-0.1.js"></script>
-<script async="" custom-template="amp-mustache" src="./index_files/amp-mustache-0.2.js"></script>
 <!-- AMP Analytics --><script async="" custom-element="amp-analytics" src="./index_files/amp-analytics-0.1.js"></script> 
     <script async="" custom-element="amp-selector" src="./index_files/amp-selector-0.1.js"></script>
  
@@ -581,6 +576,21 @@ p.tab-text {color: #538135; font-size: 14px; font-weight: 500;}
 .sample-selector ~ button,
 .radio-selector ~ button {
   margin: 1rem;
+}
+
+.choosePlan {
+    display: flex;
+    justify-content: space-around;
+}
+.opt {
+    background: #fff;
+    padding: 10px 13px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #4152b5;
+}
+.payment-plan .card-footer {
+    padding: 0 16px;
 }
 
 /*  */
@@ -1442,126 +1452,145 @@ header .chat_with_us:hover,header .call_us:hover {color: #FFFFFF;}
               <h1 class="text-center">Standard Program</h1>
               <p>Engage your child with Daily LIve class of 1 Hr through a early childcare expert, get access to Live Events and shows</p>
           </div>
-          <div class="col-12">
-              <div class="card border-0 shadow mb-4">
-                <div class="card-header">
-                  <div class="card-title m-0 h4 text-center font-weight-bold">
-                    Choose Payment Plan
+
+        <div class="col-12">
+               <!-- Step 1 -->
+                <div class="card border-0 shadow mb-4 payment-plan">
+                  <div class="card-header">
+                    <div class="card-title m-0 h4 font-weight-bold">
+                      Choose Payment Plan
+                    </div>
                   </div>
-                </div>
-                  <div class="card-body p-2">
-                      <!-- ## Forms Inside a form, `amp-selector` behaves like a radio-button/checkbox group and submits the selected value(s) against the name of the amp-selector. Here we've styled an `amp-selector` to function like a radio list. Using `amp-selector` for this has the advantage that bindings using [`amp-bind`](/documentation/components/reference/amp-bind.html) are easier to implement. -->
-                        <form action="#" method="get" target="_top">
-                          <amp-selector class="radio-selector" layout="container" name="my-selector">
-                            <div option="a">Weekdays</div>
-                            <div option="b">Week-end</div>
-                          </amp-selector>
-                          
-                           <div class="subscription py-4 px-2">
-                            <div class="row row-cols-1">
-                              <div class="col mb-2">
-                                <div class="card h-100 subscription-list">
-                                  <div class="card-body d-flex justify-content-center py-3">
-                                    <div class="flex-fill align-self-center">
-                                        <div class="custom-control custom-radio">
-                                          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                          <label class="custom-control-label font-weight-bold" for="customRadio1">1 Month</label>
-                                        </div>
-                                    </div>
-                                    <div class="flex-fill text-right align-self-center"> 
-                                      <p class="per-rupees h4 font-weight-bold m-0">&#8377; 3,000</p>
-                                      <p class="per-m m-0">per month</p>
-                                    </div>
-                                    <div class="flex-fill align-self-center text-right"> 
-                                      <p class="course-price h4 font-weight-bold m-0">&#8377; 3,000</p>
-                                      <p class="all-tx m-0">Total(Incl. of all taxes)</p>
-                                    </div>
+                    <div class="card-body bg-light px-2">
+                      <div class="choosePlan">
+                        <div class="opt flex-fill shadow-sm mr-2">
+                        <input type="radio"
+                            id="f-option1"
+                            name="selector1"
+                            role="button"
+                            tabindex="0"
+                            on="change:AMP.setState({climate:(event.checked) ? 1 : 0})">
+                          <label for="f-option1" class="m-0">Weekdays</label>
+                        </div>
+                        <div class="opt flex-fill shadow-sm ml-2">
+                          <input type="radio"
+                            id="f-option2"
+                            name="selector1"
+                            on="change:AMP.setState({climate: (event.checked) ? 2 : 0})"
+                            role="button"
+                            tabindex="0">
+                          <label for="f-option2" class="m-0">Week-end</label>
+                        </div>
+                      </div>
+                      <!--  -->
+                      <div id="accordion"  [hidden]="climate == 0" hidden>
+                        <!--  -->
+                        <div class="subscription py-4 px-2 mt-3">
+                          <div class="row row-cols-1">
+                            <div class="col mb-2 p-0">
+                              <div class="card h-100 subscription-list">
+                                <div class="card-body d-flex justify-content-center py-3">
+                                  <div class="flex-fill align-self-center">
+                                      <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label font-weight-bold" for="customRadio1">1 Month</label>
+                                      </div>
                                   </div>
-                                </div>
-                              </div>
-                              <div class="col mb-2">
-                                <div class="card h-100 subscription-list active">
-                                  <div class="card-body d-flex justify-content-center py-3">
-                                    <div class="flex-fill align-self-center">
-                                        <div class="custom-control custom-radio">
-                                          <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" checked>
-                                          <label class="custom-control-label font-weight-bold" for="customRadio2">3 Month</label>
-                                        </div>
-                                    </div>
-                                   <div class="flex-fill align-self-center text-right">
-                                      <p class="per-rupees h4 font-weight-bold m-0">&#8377; 9,000</p>
-                                      <p class="per-m m-0">per month</p> 
-                                    </div>
-                                    <div class="flex-fill align-self-center text-right"> 
-                                      <p class="course-price h4 font-weight-bold m-0">&#8377; 9,000</p>
-                                      <p class="all-tx m-0">Total(Incl. of all taxes)</p>
-                                    </div>
+                                  <div class="flex-fill text-right align-self-center"> 
+                                    <p class="per-rupees h4 font-weight-bold m-0">&#8377; 3,000</p>
+                                    <p class="per-m m-0">per month</p>
                                   </div>
-                                </div>
-                              </div>
-                              <div class="col mb-2">
-                                <div class="card h-100 subscription-list">
-                                  <div class="card-body d-flex justify-content-center py-3">
-                                    <div class="flex-fill align-self-center">
-                                        <div class="custom-control custom-radio">
-                                          <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                                          <label class="custom-control-label font-weight-bold" for="customRadio3">6 Month</label>
-                                        </div>
-                                    </div>
-                                    <div class="flex-fill align-self-center text-right"> 
-                                      <p class="per-rupees h4 font-weight-bold m-0">&#8377; 27,000</p>
-                                      <p class="per-m m-0">per month</p>
-                                    </div>
-                                    <div class="flex-fill align-self-center text-right"> 
-                                      <p class="course-price h4 font-weight-bold m-0">&#8377; 27,000</p>
-                                      <p class="all-tx m-0">Total(Incl. of all taxes)</p>
-                                    </div>
+                                  <div class="flex-fill align-self-center text-right"> 
+                                    <p class="course-price h4 font-weight-bold m-0">&#8377; 3,000</p>
+                                    <p class="all-tx m-0">Total(Incl. of all taxes)</p>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                           </div> 
-                        </form>
-                  </div>
-              </div>
-          </div>
-          <div class="col-12">
-             <div class="card border-0 shadow mb-4">
-                <div class="card-header">
-                  <div class="card-title m-0 h4 text-center font-weight-bold">
-                    Choose Add On
-                  </div>
-                </div>
-                <div class="card-body">
-                  <h4 class="mb-3 m-0 text-center">My Footprints Box @ 3999</h4>
-                  <div class="text-center mb-2">
-                    <form class="sample-form" method="post" action-xhr="/documentation/examples/api/submit-form-xhr" target="_top">
-                      <input type="checkbox"
-                        id="onetime1"
-                        name="onetime1"
-                        value="box" checked>
-                      <label for="animal1">One Time Purchase</label>
-                    </form>
-                  </div>
-                  <div class="ft-box">
-                    <amp-video controls  width="640" height="360" layout="responsive">
-                      <source src="https://home.footprints.in/assets/online-preschool.mp4" type="video/mp4" />
-                      <div fallback>
-                        <p>This browser does not support the video element.</p>
+                            <div class="col mb-2 p-0">
+                              <div class="card h-100 subscription-list active">
+                                <div class="card-body d-flex justify-content-center py-3">
+                                  <div class="flex-fill align-self-center">
+                                      <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" checked>
+                                        <label class="custom-control-label font-weight-bold" for="customRadio2">3 Month</label>
+                                      </div>
+                                  </div>
+                                <div class="flex-fill align-self-center text-right">
+                                    <p class="per-rupees h4 font-weight-bold m-0">&#8377; 9,000</p>
+                                    <p class="per-m m-0">per month</p> 
+                                  </div>
+                                  <div class="flex-fill align-self-center text-right"> 
+                                    <p class="course-price h4 font-weight-bold m-0">&#8377; 9,000</p>
+                                    <p class="all-tx m-0">Total(Incl. of all taxes)</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col mb-2 p-0">
+                              <div class="card h-100 subscription-list">
+                                <div class="card-body d-flex justify-content-center py-3">
+                                  <div class="flex-fill align-self-center">
+                                      <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label font-weight-bold" for="customRadio3">6 Month</label>
+                                      </div>
+                                  </div>
+                                  <div class="flex-fill align-self-center text-right"> 
+                                    <p class="per-rupees h4 font-weight-bold m-0">&#8377; 27,000</p>
+                                    <p class="per-m m-0">per month</p>
+                                  </div>
+                                  <div class="flex-fill align-self-center text-right"> 
+                                    <p class="course-price h4 font-weight-bold m-0">&#8377; 27,000</p>
+                                    <p class="all-tx m-0">Total(Incl. of all taxes)</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div> 
+                        <!--  -->
                       </div>
-                  </amp-video>
+                    </div>
+                </div>
+                 <!-- Step 2 -->
+                 <div class="card border-0 shadow mb-4">
+                  <div class="card-header">
+                    <div class="card-title m-0 h4 font-weight-bold">
+                      Choose Add On
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="mb-2">
+                      <form class="sample-form" method="post" action-xhr="/documentation/examples/api/submit-form-xhr" target="_top">
+                        <input type="checkbox"
+                          id="onetime1"
+                          name="onetime1"
+                          value="box" checked>
+                        <label for="animal1" class="m-0">One Time Purchase</label>
+                      </form>
+                    </div>
+                    <h4 class="mb-3 m-0">My Footprints Box @ 3999</h4>
+                    <div class="ft-box">
+                      <amp-video controls  width="640" height="360" layout="responsive">
+                        <source src="https://home.footprints.in/assets/online-preschool.mp4" type="video/mp4" />
+                        <div fallback>
+                          <p>This browser does not support the video element.</p>
+                        </div>
+                    </amp-video>
+                    </div>
                   </div>
                 </div>
-              </div>
-          </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <a href="pack.html" class="btn btn-book btn-block mb-3">Checkout</a>
+                <!-- Checkout  -->
+                <div class="row">
+                  <div class="col">
+                    <a href="pack.html" class="btn btn-book btn-block mb-2">Checkout</a>
+                  </div>
+                </div>
         </div>
-     </div>
       </div>
-    
+      
+      </div>
 </section>
 <!--  -->
 
